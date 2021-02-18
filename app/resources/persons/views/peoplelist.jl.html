@@ -1,0 +1,8 @@
+<h1>Person List: $( length(@vars(:people)) )</h1>
+<h4>Revised</h4>
+
+<ul>
+  <% @foreach(@vars(:people)) do person %>
+  <% partial("app/resources/persons/views/person.jl.html", person = person, context = @__MODULE__) %>
+  <% end %>
+</ul>
